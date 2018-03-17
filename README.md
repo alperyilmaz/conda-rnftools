@@ -14,8 +14,8 @@ docker run --rm alperyilmaz/conda-rnftools rnftools --help
 
 ## accessing local folders
 
-Assume that you placed bam/sam files within `data` folder under current working directory. 
+Assume that you placed `Snakefile` and genome files within `data` folder under current working directory. 
 
 ```bash
-docker run --rm -v $(pwd)/data:/data alperyilmaz/conda-rnftools rnftools /data/bam-file
+docker run --rm -v $(pwd)/data:/data alperyilmaz/conda-rnftools snakemake -s Snakemake
 ```
